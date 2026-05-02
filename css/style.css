@@ -181,6 +181,7 @@ h2[id] {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    
 }
 
 /* Services & Team Grids */
@@ -506,6 +507,10 @@ h2[id] {
         font-size: 1.8rem; 
     }
 
+    .hero-img {
+        height: 300px;
+    }
+
     .card-grid {
         grid-template-columns: 1fr;
     }
@@ -544,7 +549,7 @@ h2[id] {
 
 
 
-
+/* Temp page */
 
 
 .main-nav2 {
