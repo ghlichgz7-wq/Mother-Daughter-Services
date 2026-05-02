@@ -649,3 +649,7 @@ h2[id] {
     color: black;
     margin-bottom: 10px;
 }
+
+.bodytemp {
+    background-image: url("../images/background.svg");
+}
