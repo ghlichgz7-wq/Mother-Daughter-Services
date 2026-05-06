@@ -60,42 +60,47 @@ body {
     color: var(--surface-primary);
 }
 
+/* Navigation Links */
 .nav-links a {
     color: var(--surface-primary);
     text-decoration: none;
     font-weight: 600;
     margin-left: 25px;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     position: relative;
     padding: 5px 0;
     transition: color 0.3s ease;
 }
 
+/* Underline of links on hover/active */
 .nav-links a:not(.nav-contact-btn):after {
     content: '';
     position: absolute;
-    width: 0;
+    width: 100%;
     height: 2px;
     bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0;
+    transform: scaleX(0);
     background-color: var(--surface-primary);
-    transition: width 0.3s ease;
+    opacity: 0.7;
+    transition: transform 0.4s ease;
+    transform-origin: center;
+    will-change: transform;
 }
 
+/* Solid underline for current open page */
 .nav-links a.active:not(.nav-contact-btn):after {
-    width: 100%;
-    background-color: var(--surface-primary);
+    transform: scaleX(1);
+    transition: none;
+    opacity: 1;
 }
 
-.nav-links a:not(.nav-contact-btn):hover::after {
-    width: 100%;
+/* Underline for non active links on hover */
+.nav-links a:not(.nav-contact-btn):not(.active):hover::after {
+    transform: scaleX(1);
 }
 
-.nav-links a.active:hover {
-    color: var(--surface-primary);
-}
-
+/* Contact Button */
 .nav-links .nav-contact-btn {
     background-color: var(--surface-primary);
     color: var(--color-primary); 
@@ -256,14 +261,14 @@ h2[id] {
 
 /* Index.html & About.html - Who We Are & Our Story */
 
-.history {
+.who-we-are {
     margin: 50px 0;
-    padding: 30px 30px 30px 30px;
+    padding: 30px 50px 30px 50px;
     background: var(--surface-secondary);
     border-radius: 12px;
 }
 
-.history p {
+.who-we-are p {
     font-size: 1.1rem;
     margin-bottom: 30px;
     text-align: left;
@@ -331,6 +336,19 @@ h2[id] {
 }
 
 /* About.html - Our Story */
+
+.history {
+    margin: 50px 0;
+    padding: 30px 30px 30px 30px;
+    background: var(--surface-secondary);
+    border-radius: 12px;
+}
+
+.history p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    text-align: left;
+}
 
 .history-name {
     color: var(--color-primary-dark);
@@ -463,7 +481,7 @@ h2[id] {
         width: 90%;
     }
 
-        .footer-content {
+    .footer-content {
         max-width: 100%; 
         width: 100%;
         grid-template-columns:1fr 1fr 1fr;
@@ -471,7 +489,7 @@ h2[id] {
     }
 }
 
-/* Responsive Mobile UI */
+/* Responsive Mobile UI + Portrait Tablets */
 @media (max-width: 768px) {
     .main-nav { 
         flex-direction: column; 
@@ -499,7 +517,7 @@ h2[id] {
 
     .nav-links a {
         margin-left: 0;
-        font-size: 1rem;
+        font-size: 1.1rem;
         padding: 8px 12px;
     }
 
@@ -521,8 +539,8 @@ h2[id] {
         height: 300px;
     }
 
-    .card-grid {
-        grid-template-columns: 1fr;
+    .who-we-are {
+        padding: 20px;
     }
 
     .mobility-support { 
@@ -534,6 +552,10 @@ h2[id] {
     .mobility-text h2 { 
         text-align: center;
         margin: 0 auto;
+    }
+
+    .history {
+        padding: 20px;
     }
 
     .enquire-btn {
@@ -555,8 +577,12 @@ h2[id] {
 
 }
 
-
-
+/* Responsive Mobile UI - Static Nav For Landscape View */
+@media (max-height: 500px) {
+    .main-nav {
+        position: static;
+    }
+}
 
 
 
