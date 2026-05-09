@@ -699,14 +699,16 @@ body.bodytemp {
     background-size: cover;
 }
 
-.testimonials-container {
-    display: flex;
-    flex-direction: column;
+.testimonials {
+    display: flex !important;
+    flex-direction: column !important;
     gap: 30px;
-        margin: 50px 0;
-    padding: 30px 30px 30px 30px;
-    background: var(--surface-secondary);
+    margin: 50px 0;
+    padding: 30px;
+    background: white; /* Temporary hardcoded color to test */
     border-radius: 12px;
+    visibility: visible !important;
+    opacity: 1 !important;
 }
 
 .testimonial-item {
