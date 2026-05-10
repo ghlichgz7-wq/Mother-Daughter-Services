@@ -43,8 +43,8 @@ body {
 }
 
 .logo-image {
-    width: 70px;
-    height: 70px;
+    width: 90px;
+    height: 90px;
     border-radius: 50%;
     background: var(--surface-primary);
     border: 2px solid var(--surface-primary);
@@ -53,7 +53,7 @@ body {
 }
 
 .logo-text {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     font-weight: 800;
     letter-spacing: 0.5px;
     white-space: nowrap;
@@ -170,7 +170,7 @@ h2[id] {
 }
 
 .hero-statement {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     color: var(--color-primary-dark);
     margin-top: -20px;
     margin-bottom: 20px;
@@ -352,14 +352,16 @@ h2[id] {
 
 .history-name {
     color: var(--color-primary-dark);
+    font-weight: bold;
     padding: 20px;
     border-top: 1px solid var(--surface-border);
     border-bottom: 1px solid var(--surface-border);
 }
 
 .history-close {
-    font-weight: 600;
+    font-weight:bold;
     margin-top: 40px;
+    color: var(--color-primary-dark);
 }
 
 /* Get In Touch Section */
@@ -532,7 +534,7 @@ h2[id] {
     }
 
     h1 { 
-        font-size: 1.8rem; 
+        font-size: 1.9rem; 
     }
 
     .hero-img {
@@ -617,8 +619,8 @@ h2[id] {
 }
 
 .logo-image2 {
-    width: 70px;
-    height: 70px;
+    width: 90px;
+    height: 90px;
     border-radius: 50%;
     background: var(--surface-primary);
     border: 2px solid var(--surface-primary);
