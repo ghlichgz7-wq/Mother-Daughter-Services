@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en-NZ">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mother-Daughter Services</title>
+    <meta name="description" content="Transport, Companionship and Gardening services in Hamilton, Valuing, Enabling, Honouring & Supporting in our community.">
+    <link rel="canonical" href="https://www.mother-daughterservices.co.nz/">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="preconnect" href="https://form.jotform.com">
+    <link rel="preconnect" href="https://cdn.jotfor.ms"> -->
+    <script src="js/script.js" defer></script> <!--Automatically updates year variable-->
+</head>
+<body>
+    
+    <!-- Top Navigation -->
+    <nav class="main-nav">
+        <!-- Logo & Name -->
+        <a href="index.html" class="nav-logo">
+          <img src="images/logo.svg" alt="Logo" class="logo-image">
+          <span class="logo-text">Mother-Daughter Services</span>
+        </a>
+        <!-- Page Links -->
+        <div class="nav-links">
+            <a href="transport.html">Transport</a>
+            <a href="companionship.html">Companionship</a>
+            <a href="gardening.html">Gardening</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html" class="nav-contact-btn">Contact</a>
+        </div>
+    </nav>  
+    
+    <main class="container">
+        <div class="content-wrapper">
+            <!-- Page Title & Statement -->
+            <h1>Contact Us</h1>
+            <hr>
+
+            <!-- Buttons to directly contact via phone & email -->
+            <section class="contact-direct">
+
+                <div class="contact-item">
+                    <a class="primary-btn" href="tel:0508809010">&#128222; 0508 80 90 10 (Free Calling Within NZ)</a>
+                </div>
+
+                <div class="contact-item">
+                    <a class="primary-btn" href="mailto:info@mother-daughterservices.co.nz">&#128231; info@mother-daughterservices.co.nz</a>
+                </div>
+
+            </section> 
+
+            <!-- Jotforms Working Form - Uncomment section below & delete current <form> if errors occur -->
+            <!-- <section class="contact-form">
+                 <iframe id="JotFormIFrame-261183535430048" onload="window.parent.scrollTo(0,0)" allowtransparency="true" allow="geolocation; microphone; camera; fullscreen; payment" src="https://form.jotform.com/261183535430048" frameborder="0" style="min-width:100%;max-width:100%;height:539px;border:none;" scrolling="no" > </iframe> 
+                 <script src='https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js'></script> 
+                 <script>window.jotformEmbedHandler("iframe[id='JotFormIFrame-261183535430048']", "https://form.jotform.com/")</script> 
+            </section> -->
+            
+            <!-- Freespree Form - Submissions sent to info@mother-daughterservices.co.nz -->
+            <form action="https://formspree.io/f/mwvzqyqz" method="POST" class="contact-form">
+
+                <h2 class="form-header">Or You're Welcome To Fill In The Form Below</h2>
+                <p class="hero-statement"></p>
+                
+                <!-- Honeypot -->
+                <input type="text" name="_gotcha" style="display:none" aria-hidden="true" tabindex="-1" autocomplete="off">
+                
+                <!-- Form input - Name -->
+                <div class="form-group">
+                    <label class="form-label" for="firstname">First Name<span class="required">(Required)</span></label>
+                    <input type="text" id="firstname" name="firstname" class="form-input" placeholder="Jane" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="lastname">Last Name<span class="required">(Required)</span></label>
+                    <input type="text" id="lastname" name="lastname" class="form-input" placeholder="Doe" required>
+                </div>
+
+                <!-- Form input - Contact Info -->
+                <div class="form-group">
+                    <label class="form-label" for="email">Email<span class="required">(Required)</span></label>
+                    <input type="email" id="email" name="email" class="form-input" placeholder="example@example.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="phone">Phone<span class="required">(Required)</span></label>
+                    <input type="tel" id="phone" name="phone" class="form-input" placeholder="(000) 000-0000" required>
+                </div>
+
+                 <!-- Form input - Address -->
+                <div class="form-group">
+                    <label class="form-label" for="street">Street Address<span class="required">(Required)</span></label>
+                    <input type="text" id="street" name="street" class="form-input" placeholder="123 Main Street" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="street2">Street Address 2</label>
+                    <input type="text" id="street2" name="street2" class="form-input">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="city">City<span class="required">(Required)</span></label>
+                    <input type="text" id="city" name="city" class="form-input" placeholder="Hamilton" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="postcode">Post Code<span class="required">(Required)</span></label>
+                    <input type="numeric" id="postcode" name="postcode" class="form-input" placeholder="0000" required>
+                </div>
+
+                 <!-- Form input - Inquiry -->
+                <div class="form-group">
+                    <label class="form-label" for="inquirytype">Inquiry Type<span class="required">(Required)</span></label>
+                    <select id="inquirytype" name="inquirytype" class="form-select" required>
+                        <option value="" disabled selected hidden>Please select</option>
+                        <option value="general">General</option>
+                        <option value="transport">Transport</option>
+                        <option value="companionship">Companionship</option>
+                        <option value="gardening">Gardening</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="message">How can we help?<span class="required">(Required)</span></label>
+                    <textarea id="message" name="message" class="form-textarea" rows="4" placeholder="Tell us about the services you need..." required></textarea>
+                </div>
+
+                 <!-- Form input - Controls -->
+                <div class="form-submit">
+                    <button type="submit" class="primary-btn form">Submit</button>
+                </div>
+                <p class="hero-statement form"></p>
+                <div class="form-reset">
+                <button type="reset" class="reverse-btn form" onclick="return confirm('Are you sure you want to clear your answers?')">Clear all questions</button>
+                </div>
+
+            </form>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-content">  
+            <!-- Section with Logo & Statement -->
+            <section class="footer-section">
+                <a href="index.html" class="nav-logo">
+                <img src="images/logo.svg" alt="Mother-Daughter Services Logo" class="logo-image">
+                </a>
+                <strong class="logo-text">Mother-Daughter Services</strong>
+                <p>Supporting independence for people and providing peace of mind for families.</p>
+            </section>
+
+            <!-- Section with Logo & Statement -->
+            <section class="footer-section">
+                <h4>Get In Touch</h4>
+                <a href="tel:0508809010">&#128222; 0508 80 90 10 (Free Calling Within NZ)</a>
+                <a href="mailto:info@mother-daughterservices.co.nz">&#128231; info@mother-daughterservices.co.nz</a>
+            </section>
+
+            <!-- Section with page links -->
+            <section class="footer-section">
+                <h4>Site Map</h4>
+                <a href="transport.html">Transport</a>
+                <a href="companionship.html">Companionship</a>
+                <a href="gardening.html">Gardening</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact Us</a>
+            </section>
+        </div>
+
+        <!-- Copyright with auto updated year -->
+        <div class="footer-bottom">
+            <p>&copy; <time id="year">2026</time> Mother-Daughter Services. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

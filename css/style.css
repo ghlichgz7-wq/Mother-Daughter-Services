@@ -8,28 +8,29 @@
     --surface-border: #eee; /* Borders */
     --surface-secondary: rgba(255, 255, 255, 0.95); /* Content Background */
     --accent-gold: #ffd700; /* Footer headers & link hover */
+    --gradient-body: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 50%, var(--color-primary-light) 100%); /* Body Gradient */
+    --gradient-nav: linear-gradient(to right, var(--color-primary-midnight), var(--color-primary-dark)); /* Nav & Footer Gradient */
 }
 
 body {
     font-family: 'Segoe UI', Roboto, Arial, sans-serif;
-    background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 50%, var(--color-primary-light) 100%);
-    color: #000000;
+    background: var(--gradient-body);
+    color: black;
     line-height: 1.6;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    position: relative;
     margin: 0;
 }
 
 /* Navigation */
 .main-nav {
-    background: linear-gradient(to right, var(--color-primary-midnight), var(--color-primary-dark));
+    background: var(--gradient-nav);
     padding: 12px 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.3);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -46,7 +47,6 @@ body {
     width: 90px;
     height: 90px;
     border-radius: 50%;
-    background: var(--surface-primary);
     border: 2px solid var(--surface-primary);
     object-fit: cover;
     margin-right: 12px;
@@ -85,7 +85,6 @@ body {
     opacity: 0.7;
     transition: transform 0.4s ease;
     transform-origin: center;
-    will-change: transform;
 }
 
 /* Solid underline for current open page */
@@ -112,7 +111,7 @@ body {
 .nav-links .nav-contact-btn:hover {
     background-color: var(--color-primary);
     color: var(--surface-primary);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
     text-decoration: none;
 }
 
@@ -143,7 +142,6 @@ h2 {
     color: var(--color-primary);
     text-align: center;
     margin-top: 0;
-    margin-bottom: 30px;
     position: relative;
     padding-bottom: 15px;
     width: fit-content;
@@ -157,7 +155,7 @@ h2::after {
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 50%; 
+    width: 60%; 
     height: 4px;
     background-color: var(--color-primary);
     border-radius: 2px;
@@ -169,14 +167,16 @@ h2[id] {
     scroll-margin-top: 130px;
 }
 
+hr{
+    border: none;
+    border-bottom: 2px solid var(--surface-border);
+}
+
 .hero-statement {
     font-size: 1.4rem;
     color: var(--color-primary-dark);
     margin-top: -20px;
-    margin-bottom: 20px;
     font-weight: 500;
-    border-bottom: 2px solid var(--surface-border);
-    padding-bottom: 10px;
 }
 
 /* Index.html - Team Image */
@@ -187,10 +187,6 @@ h2[id] {
     border-radius: 10px;
     margin: 25px 0;
     display: block;
-    /* flex-direction: column;
-    align-items: center;
-    justify-content: center; */
-    
     object-fit: cover;
     object-position: center;
 }
@@ -251,12 +247,13 @@ h2[id] {
     font-weight: bold;
     font-size: 1rem;
     margin-top: auto;
-    box-shadow: 0 4px 10px var(--shadow-primary);
+    box-shadow: 0 5px 10px var(--shadow-primary);
+    transition: all 0.3s ease;
 }
 
 
 .view-more-btn:hover {
-    box-shadow: 0 6px 15px var(--shadow-primary);
+    box-shadow: 0 5px 15px var(--shadow-primary);
     background: var(--color-primary-dark);
     transform: translateY(-2px) scale(1.05);
 }
@@ -276,7 +273,46 @@ h2[id] {
     text-align: left;
 }
 
-.our-story-btn {
+/* Index.html - Testimonials */
+
+.testimonials {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin: 50px 0;
+    padding: 30px;
+    background: var(--surface-secondary);
+    border-radius: 12px;
+}
+
+
+.testimonial-item {
+    text-align: left;
+    padding-left: 20px;
+    border-left: 4px solid var(--color-primary);
+    margin-bottom: 10px;
+}
+
+
+.testimonial-quote {
+    font-size: 1.1rem;
+    color: black;
+    margin: 0 0 10px 0;
+    line-height: 1.5;
+}
+
+
+.testimonial-author {
+    font-weight: 700;
+    color: var(--color-primary-dark);
+    margin: 0;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Index.html & Contact.html - Our Story & Reset inputs */
+.reverse-btn {
     display: inline-block;
     background: transparent;
     border: 2px solid var(--color-primary);
@@ -288,7 +324,7 @@ h2[id] {
     transition: all 0.3s ease;
 }
 
-.our-story-btn:hover {
+.reverse-btn:hover {
     background: var(--color-primary);
     color: var(--surface-primary);
     transform: translateY(-2px);
@@ -339,6 +375,31 @@ h2[id] {
 
 /* About.html - Our Story */
 
+.team-img {
+    margin: 25px 0 0;
+    padding: 0;
+}
+
+.team-caption {
+    background: var(--surface-secondary);
+    padding: 12px 20px;
+    border-radius: 0 0 10px 10px; 
+    border-bottom: 3px solid var(--color-primary);
+}
+
+.names {
+    color: var(--color-primary-dark);
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 1.1rem;
+}
+
+.team-img .hero-img {
+    border-radius: 10px 10px 0 0;
+    display: block;
+    margin-bottom: 0%;
+}
+
 .history {
     margin: 50px 0;
     padding: 30px 30px 30px 30px;
@@ -356,20 +417,26 @@ h2[id] {
     margin-bottom: 0px;
 }
 
-.history ul {
+ .history ul {
     list-style: none;
-    margin-top: 10px;
+    padding-left: 20px;
 }
+
 .history li {
     text-align: left;
+    position: relative;
+    padding-left: 1.5rem;
 }
 
 .history li::before {
-    content: "—";
+    content: "\2014";
     width: 2em;
-    display: inline-block;
-    color: var(--color-primary);
-}
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--color-primary-dark);
+} 
 
 .history-name {
     color: var(--color-primary-dark);
@@ -385,6 +452,73 @@ h2[id] {
     color: var(--color-primary-dark);
 }
 
+/* Contact Us Section */
+.contact-direct {
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+.contact-form {
+    background-color: var(--surface-primary);
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    text-align: left; 
+}
+
+.form-group {
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-label {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--color-primary-dark);
+    margin-bottom: 8px;
+    display: block;
+}
+
+.form-input, .form-select, .form-textarea {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2rem; 
+    border: 2px solid var(--surface-border);
+    border-radius: 8px;
+    background-color: var(--surface-primary);
+    box-sizing: border-box;
+    font-family: inherit;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-input:focus, .form-select:focus, .form-textarea:focus {
+    outline: none;
+    border-color: var(--color-primary);
+}
+
+.required {
+    font-size: 0.9rem;
+    color: var(--color-primary); 
+    margin-left: 5px;
+}
+
+.form-submit {
+    text-align: center;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.form-reset {
+    text-align: left;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.hero-statement.form {
+    padding-top: 40px;
+}
+
 /* Get In Touch Section */
 
 .get-in-touch {
@@ -397,7 +531,8 @@ h2[id] {
     border-right: 8px solid var(--color-primary);
 }
 
-.enquire-btn {
+/* Primary-btn used in: Get In Touch, Contact.html - Direct Contact & Submit */
+.primary-btn {
     display: inline-block;
     background: var(--color-primary);
     border: 2px solid var(--color-primary);
@@ -408,19 +543,19 @@ h2[id] {
     font-weight: bold;
     font-size: 1.2rem;
     margin-top: 15px;
-    box-shadow: 0 4px 10px var(--shadow-primary);
+    box-shadow: 0 5px 10px var(--shadow-primary);
     transition: all 0.3s ease;
 }
 
-.enquire-btn:hover {
-    box-shadow: 0 6px 15px var(--shadow-primary);
+.primary-btn:hover {
+    box-shadow: 0 5px 15px var(--shadow-primary);
     background: var(--color-primary-dark);
     transform: translateY(-2px) scale(1.05);
 }
 
 /* Footer Section */
 .site-footer {
-    background: linear-gradient(to right, var(--color-primary-midnight), var(--color-primary-dark)); 
+    background: var(--gradient-nav);
     color: var(--surface-primary);
     padding: 50px 5% 0px;
     margin-top: 60px;
@@ -480,7 +615,7 @@ h2[id] {
 
 /* Responsive Tablet UI */
 
-@media (min-width: 769px) and (max-width: 1024px) {
+@media (min-width: 769px) and (max-width: 1200px) {
     .main-nav {
         flex-direction: column;
         gap: 15px;
@@ -540,7 +675,7 @@ h2[id] {
 
     .nav-links a {
         margin-left: 0;
-        font-size: 1.1rem;
+        font-size: 1.2rem;
         padding: 8px 12px;
     }
 
@@ -552,10 +687,6 @@ h2[id] {
 
     .content-wrapper {
         padding: 20px;
-    }
-
-    h1 { 
-        font-size: 1.9rem; 
     }
 
     .hero-img {
@@ -581,9 +712,26 @@ h2[id] {
         padding: 20px;
     }
 
-    .enquire-btn {
+    .contact-direct {
+        margin-bottom: 30px;
+    }
+
+    .primary-btn {
         width: 100%;
         box-sizing: border-box;
+    }
+
+    .form-label {
+        font-size: 1.1rem;
+    }
+
+    .form-input, .form-select, .form-textarea {
+        font-size: 1.1rem;
+        padding: 12px;
+    }
+
+    .form-reset {
+        text-align: center;
     }
 
     .footer-content {
@@ -600,9 +748,28 @@ h2[id] {
 
 }
 
+/* Responsive Mobile UI */
 @media (max-width: 480px) {
     .logo-text {
         font-size: 1.3rem;
+    }
+
+    .nav-links a {
+        font-size: 1.2rem;
+    }
+
+    .history ul {
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 380px) {
+    .logo-text {
+        font-size: 1.2rem;
+    }
+
+    .nav-links a {
+        font-size: 1.1rem;
     }
 }
 
@@ -611,161 +778,4 @@ h2[id] {
     .main-nav {
         position: static;
     }
-}
-
-
-
-
-
-
-
-/* Temp page */
-
-
-.main-nav2 {
-    background: linear-gradient(to right, var(--color-primary-midnight), var(--color-primary-dark));
-    padding: 12px 5%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    gap:15px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    border-bottom: 2px solid var(--surface-primary);
-    
-}
-
-.nav-logo2 {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    
-}
-
-.logo-image2 {
-    width: 90px;
-    height: 90px;
-    border-radius: 50%;
-    background: var(--surface-primary);
-    border: 2px solid var(--surface-primary);
-    object-fit: cover;
-    margin: 0 15px;
-}
-
-.logo-text2 {
-    font-size: 1.5rem;
-    font-weight: 800;
-    letter-spacing: 0.5px;
-    white-space: nowrap;
-    color: var(--surface-primary);
-}
-
-.nav-links2 a {
-    color: var(--surface-primary);
-    text-decoration: none;
-    font-weight: 600;
-    margin-left: 25px;
-    font-size: 1.3rem;
-    position: relative;
-    padding: 5px 0;
-    transition: color 0.3s ease;
-}
-
-.nav-links2 a:not(.nav-contact-btn2):after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: var(--surface-primary);
-    transition: width 0.3s ease;
-}
-
-.nav-links2 a:not(.nav-contact-btn2):hover::after {
-    width: 100%;
-}
-
-.nav-links2 a:hover {
-    color: rgba(255, 255, 255, 0.8);
-    text-decoration: none; 
-} 
-
-.nav-links2 .nav-contact-btn2 {
-    background-color: var(--surface-primary);
-    color: var(--color-primary); 
-    padding: 8px 20px;
-    border-radius: 20px; 
-    transition: all 0.3s ease;
-}
-
-.nav-links2 .nav-contact-btn2:hover {
-    background-color: var(--color-primary);
-    color: var(--surface-primary);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    text-decoration: none;
-}
-
-.card-img2 {
-    border-radius: 50%;
-    border: 4px solid var(--color-primary);
-}
-
-.card-text.temp h3 {
-    color: black;
-    margin-bottom: 10px;
-}
-
-body.bodytemp {
-    background-image: 
-        url("../images/Background.svg"), 
-        linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 50%, var(--color-primary-light) 100%);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.testimonials {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 30px;
-    margin: 50px 0;
-    padding: 30px;
-    background: white; /* Temporary hardcoded color to test */
-    border-radius: 12px;
-    visibility: visible !important;
-    opacity: 1 !important;
-}
-
-.testimonial-item {
-    text-align: left;
-    padding-left: 20px;
-    border-left: 4px solid var(--color-primary);
-    margin-bottom: 10px;
-}
-
-.testimonial-quote {
-    font-style: italic;
-    font-size: 1.15rem;
-    color: #444;
-    margin: 0 0 10px 0;
-    line-height: 1.5;
-}
-
-.testimonial-author {
-    font-weight: 700;
-    color: var(--color-primary-dark);
-    margin: 0;
-    font-size: 1rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-/* Hover effect for a bit of interactivity */
-.testimonial-item:hover {
-    background-color: rgba(193, 51, 91, 0.05);
-    transition: background-color 0.3s ease;
 }

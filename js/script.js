@@ -1,11 +1,12 @@
-// Automatically updates year variable
-const yearSpan = document.getElementById("year");
-if (yearSpan) {
-    yearSpan.textContent = new Date().getFullYear();
-}
-
-// Changes active nav link decoration 
 document.addEventListener("DOMContentLoaded", () => {
+
+    // Automatically updates year variable
+    const yearSpan = document.getElementById("year");
+        if (yearSpan) {
+            yearSpan.textContent = new Date().getFullYear();
+        }
+
+    // Identifies the current open page for active underline
     const fullPath = window.location.pathname;
     let currentFile = fullPath.split("/").pop();
 
