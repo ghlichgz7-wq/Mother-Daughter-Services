@@ -275,28 +275,12 @@ hr{
 
 /* Index.html - Testimonials */
 
-.testimonials {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    margin: 50px 0;
-    padding: 30px;
-    background: var(--surface-secondary);
-    border-radius: 12px;
-}
-
-.testimonial-item {
-    text-align: left;
-    padding-left: 20px;
-    border-left: 4px solid var(--color-primary);
-    margin-bottom: 10px;
-}
-
 .testimonial-quote {
     font-size: 1.1rem;
     color: black;
     margin: 0 0 10px 0;
     line-height: 1.5;
+    text-align: left;
 }
 
 .testimonial-author {
@@ -305,6 +289,7 @@ hr{
     margin: 0;
     font-size: 1rem;
     letter-spacing: 1px;
+    margin-top: auto;
 }
 
 .testimonial-country {
@@ -316,9 +301,11 @@ hr{
 .testimonial-country::before {
     content: "|";
     margin: 0 10px;
-    color: var(--color-primary); 
+    color: var(--color-primary-dark); 
     font-weight: bold;
-}
+} 
+
+
 
 /* Index.html & Contact.html - Our Story & Reset inputs */
 .reverse-btn {
