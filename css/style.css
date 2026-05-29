@@ -275,11 +275,13 @@ hr{
 
 /* Index.html - Testimonials */
 
+.card-grid .testimonial{
+    border: 1px solid var(--color-primary);
+}
+
 .testimonial-quote {
     font-size: 1.1rem;
-    color: black;
-    margin: 0 0 10px 0;
-    line-height: 1.5;
+    margin: 0 0 20px 0;
     text-align: left;
 }
 
@@ -287,9 +289,9 @@ hr{
     font-weight: 700;
     color: var(--color-primary-dark);
     margin: 0;
-    font-size: 1rem;
-    letter-spacing: 1px;
+    font-size: 1.1rem;
     margin-top: auto;
+    text-align: left;
 }
 
 .testimonial-country {
@@ -302,7 +304,6 @@ hr{
     content: "|";
     margin: 0 10px;
     color: var(--color-primary-dark); 
-    font-weight: bold;
 } 
 
 
