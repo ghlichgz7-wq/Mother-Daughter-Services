@@ -95,7 +95,7 @@
 
                 <div class="form-group">
                     <label class="form-label" for="phone">Phone<span class="required">(Required)</span></label>
-                    <input type="tel" inputmode="tel" pattern="[0-9\s()\-]+" id="phone" name="phone" class="form-input" placeholder="(000) 000-0000" required>
+                    <input type="tel" inputmode="tel" pattern="[0-9 ()+]+" id="phone" name="phone" class="form-input" placeholder="000 000 0000" onblur="if(this.value !== '') { if (!/^[0-9 ()+]+$/.test(this.value) || this.value.replace(/[^0-9]/g, '').length < 6) { alert('Please enter a valid phone number. It must contain at least 6 digits.'); setTimeout(() => this.focus(), 10); } }" required>
                 </div>
 
                  <!-- Form input - Address -->
