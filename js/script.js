@@ -14,6 +14,10 @@ document.addEventListener("DOMContentLoaded", () => {
         currentFile = "index.html";
     }
 
+    if (currentFile && !currentFile.endsWith(".html") && currentFile !== "index.html") {
+        currentFile += ".html";
+    }
+
     const navLinks = document.querySelectorAll(".nav-links a");
 
     navLinks.forEach(link => {

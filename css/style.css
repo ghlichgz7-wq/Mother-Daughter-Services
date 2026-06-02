@@ -207,12 +207,15 @@ hr{
     gap: 20px;
 }
 
+/* 3 Card Grid */
 .card-img {
-    width: calc(100% + 60px); 
+    width: calc(100% + 60px);
+    max-width: none; /* Prevents restriction overrides */
     margin: -30px -30px 10px -30px; 
     height: 220px; 
     object-fit: cover; 
-    border-radius: 12px 12px 0 0; 
+    border-radius: 12px 12px 0 0;
+    box-sizing: border-box; /* Resolves cross-browser sizing bugs */
 }
 
 .card-text { 
