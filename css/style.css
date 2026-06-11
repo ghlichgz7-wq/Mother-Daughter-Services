@@ -60,20 +60,34 @@ body {
     color: var(--surface-primary);
 }
 
+.logo-location {
+    font-size: clamp(0.8rem, 2.5vw, 1rem);
+    color: var(--surface-primary);
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    letter-spacing: 1.5px;
+    margin-top: 2px;
+    opacity: 0.9;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.logo-location::before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background-color: var(--surface-primary);
+    border-radius: 50%;
+}
+
 .logo-name {
     font-size: 1.6rem;
     font-weight: 800;
     letter-spacing: 0.5px;
     white-space: nowrap;
-}
-
-.logo-statement {
-    font-size: 1rem;
-    font-weight: 600;
-    letter-spacing: 1.5px;
-    margin-top: 2px;
-    opacity: 0.9;
-    text-align: center;
 }
 
 /* Navigation Links */
@@ -186,31 +200,6 @@ h2[id] {
 hr{
     border: none;
     border-bottom: 2px solid var(--surface-border);
-}
-
-.hero-location {
-    font-size: clamp(1.1rem, 2.5vw, 1.4rem); /* Slightly sleeker font size */
-    color: var(--color-primary-dark);
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    
-    /* Centering the badge itself and aligning its internal contents */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    margin: 8px auto 0; /* 'auto' keeps the block centered horizontally */
-    width: fit-content;
-}
-
-/* The subtle geometric dot accent */
-.hero-location::before {
-    content: '';
-    display: inline-block;
-    width: 6px;
-    height: 6px;
-    background-color: var(--color-primary);
-    border-radius: 50%;
 }
 
 .hero-statement {
@@ -778,6 +767,11 @@ hr{
 
 /* Responsive Mobile UI */
 @media (max-width: 480px) {
+
+    .logo-text{
+        margin-bottom: 5px;
+    }
+
     .logo-name {
         font-size: 1.3rem;
     }
