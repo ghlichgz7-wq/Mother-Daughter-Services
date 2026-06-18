@@ -483,10 +483,94 @@ hr{
 }
 
 /* Contact Us Section */
+
+/* Contact Direct Buttons */
+
 .contact-direct {
-    margin-top: 30px;
-    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin: 35px auto;
+    max-width: max-content;
+    width: 100%;
+    align-items: stretch;
 }
+
+.contact-direct-btn {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.contact-card {
+    background: var(--surface-primary);
+    border-radius: 12px;
+    padding: 18px 24px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-align: left;
+    transition: all 0.25s ease-in-out;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.01);
+    border: 2px solid var(--color-primary)
+}
+
+.contact-direct-btn:hover .contact-card {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(193, 51, 91, 0.12);
+}
+
+.contact-icon {
+    background-color: rgba(193, 51, 91, 0.08);
+    color: var(--color-primary);
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: all 0.25s ease;
+}
+
+.contact-icon-img {
+    width: 24px;
+    height: 24px;
+}
+
+.contact-direct-btn:hover .contact-icon {
+    background-color: var(--color-primary);
+    color: var(--surface-primary);
+}
+
+.contact-card-text {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    width: 100%;
+}
+
+.contact-card-label {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: var(--color-primary-midnight);
+    font-weight: 700;
+    margin-bottom: 2px;
+}
+
+.contact-card-value {
+    font-size: 1.3rem;
+    color: var(--color-primary-dark);
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.email {
+    white-space: nowrap;
+}
+
+/* Contact Form */
 
 .contact-form {
     background-color: var(--surface-primary);
@@ -829,6 +913,36 @@ hr{
         padding-left: 0;
     }
 
+    .contact-card {
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .contact-icon {
+        width: 46px;
+        height: 46px;
+    }
+
+    .contact-icon-img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .contact-card-value {
+        font-size: clamp(1rem, 4.2vw, 1.25rem);
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2px;
+    }
+
+    .contact-card-label {
+        font-size: 0.8rem;
+    }
+
+    .email{
+        font-size: 1rem;
+    }
+
     .footer-bottom{
         font-size: 0.9rem;
     }
@@ -850,6 +964,10 @@ hr{
     .hero-statement {
     font-size: 1.2rem;
     }
+
+    .email {
+        white-space: wrap;
+    } 
 }
 
 /* Responsive Mobile UI - Static Nav For Landscape View */
