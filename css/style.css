@@ -256,13 +256,17 @@ hr{
 }
 
 .card-text h3, .card-text p {
-    padding-inline: 20px;
+    padding-inline: 10px;
 }
 
 .card-text h3 {
     color: var(--color-primary);
     margin-top: 20px;
-    margin-bottom: 10px;
+    margin-bottom:0px;
+}
+
+.card-text p {
+    margin-bottom:30px;
 }
 
 /* Index.html details button  */
@@ -310,21 +314,24 @@ hr{
 
 .card-grid .testimonial{
     border: 1px solid var(--color-primary);
+    padding-left: 10px;
 }
 
 .testimonial-quote {
     font-size: 1.1rem;
     margin: 0 0 20px 0;
     text-align: left;
+    padding: 10px;
 }
 
-.testimonial-author {
+.testimonial .testimonial-author {
     font-weight: 700;
     color: var(--color-primary-dark);
     margin: 0;
     font-size: 1.1rem;
     margin-top: auto;
     text-align: left;
+    padding-bottom: 10px;
 }
 
 .testimonial-country {
@@ -338,8 +345,6 @@ hr{
     margin: 0 5px;
     color: var(--color-primary-dark); 
 } 
-
-
 
 /* Index.html & Contact.html - Our Story & Reset inputs */
 .reverse-btn {
