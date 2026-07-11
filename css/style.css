@@ -301,6 +301,7 @@ hr{
     margin: 50px 0;
     padding: 30px 50px 30px 50px;
     background: var(--surface-secondary);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
     border-radius: 12px;
 }
 
